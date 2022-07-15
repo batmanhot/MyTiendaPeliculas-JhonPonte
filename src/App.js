@@ -1,25 +1,17 @@
-import logo from './logo.svg';
+import React, {Component}   from 'react';
 import './App.css';
+import Titulo from './components/title';
+import Menu  from './components/navbar';
+import Title from './components/title';
+import NavBar from './components/navbar';
+import Acordion from './components/acordion';
 
 function App() {
-  const nombre_app='MI TIENDA DE PELICULAS EN REACT- CODERHOUSE'
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>{nombre_app}</p>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Web en construccion, estamos trabajando ....
-        </p>        
-        <p>
-          Diseñador Jhon Ponte 
-        </p>        
-        {/* <a
-         className="App-link"         
-         href="https://reactjs.org" target="_blank" rel="noopener noreferrer"
-        >
-        </a>  */}
-      </header>
+  return(   
+   <div className="App">
+        <NavBar/>
+        {/* <header className="App-header">            
+        </header> */}
     </div>
   );
 }

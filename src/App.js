@@ -8,14 +8,18 @@ import Acordion from './components/acordion';
 import ItemListContainer from './components/ItemListContainer';
 
 function App() {
-  return(   
-   <div className="App">
+ 
+    const articulo = {
+        nombre: "Licuadora Phillips",
+        urlImagen: "https://via.placeholder.com/64",
+        Descripciom: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim "
+    }
+    return(  
 
-        <NavBar/>    
-        <ItemListContainer persona="Pronto aqui, peliculas en español latino" />
-        <ItemListContainer persona="Estreno, Accion, Ficcion, Marvel, etc " />
-       {/* <header className="App-header">            
-        </header> */}
+   <div className="App">
+        <NavBar/>
+        <ItemListContainer persona="Pronto aqui, peliculas en español latino, las que mas quieres" />        
+        <br/>
     </div>
   );
 }

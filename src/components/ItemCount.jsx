@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import { useState } from 'react';
 
+
 const ItemCount =  ({ pedidoinicio, stockdisponible }) => {
 
     const [contador, setcontador] = useState(pedidoinicio);
@@ -15,8 +16,13 @@ const ItemCount =  ({ pedidoinicio, stockdisponible }) => {
         if (contador < stockdisponible) {
             setcontador(contador+1)
         }
-    }    
-        return (  
+    }
+
+    const onAdd = (contador) => {
+        console.log(`Agregaste ${contador} items al Carrito de Compras`)    
+      }
+
+       return (  
             <Fragment>                
                 <hr />
                 <div> 
@@ -24,11 +30,10 @@ const ItemCount =  ({ pedidoinicio, stockdisponible }) => {
 
                     <button onClick={resta} type="button" class="btn btn-danger">-</button>
                      <span class="fw-bold"> Cantidad {contador} </span>                     
-                    <button onClick={suma}type="button" class="btn btn-primary">+</button>
-
-                    {/* <button onClick={resta}>-</button><span> Cantidad {contador} </span><button onClick={suma}>+</button>  */}
-                    {/* <button onClick={resta}>-</button><input type="text" name="cantidad" value={contador}/><button onClick={suma}>+</button> */}
-                    
+                    <button onClick={suma} type="button" class="btn btn-primary">+</button>
+                    <br />
+                    <br />
+                    <button onClick={()=>onAdd(contador)} type="button" class="btn btn-primary"> Agregar al Carrito </button>
                 </div>
             </Fragment>
         );

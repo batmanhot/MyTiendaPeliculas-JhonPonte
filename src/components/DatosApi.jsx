@@ -1,3 +1,4 @@
+// https://www.themoviedb.org/ : Web de Peliculas
 
 const productos = [
     {
@@ -90,5 +91,5 @@ export const data = new Promise((resolve, reject) => {
         }else{
             reject("Algo Salio Mal no cargo la lista de productos")
         }
-    } ,3000)           
+    } ,2000)           
 })

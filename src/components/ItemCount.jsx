@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { useState } from 'react';
 
 
-const ItemCount =  ({ pedidoinicio, stockdisponible }) => {
+const ItemCount =  ({ pedidoinicio, stockdisponible, onAdd }) => {
 
     const [contador, setcontador] = useState(pedidoinicio);
 
@@ -18,22 +18,20 @@ const ItemCount =  ({ pedidoinicio, stockdisponible }) => {
         }
     }
 
-    const onAdd = (contador) => {
-        console.log(`Agregaste ${contador} items al Carrito de Compras`)    
-      }
+    // const onAdd = (contador) => {
+    //     console.log(`Agregaste ${contador} items al Carrito de Compras`)    
+    //   }
 
        return (  
             <Fragment>                
                 <hr />
-                <div> 
-                    <p class="fw-normal">Mi pedido</p>
-
+                <div>              
                     <button onClick={resta} type="button" class="btn btn-danger">-</button>
                      <span class="fw-bold"> Cantidad {contador} </span>                     
-                    <button onClick={suma} type="button" class="btn btn-primary">+</button>
+                    <button onClick={suma} type="button" class="btn btn-success">+</button>
                     <br />
-                    <br />
-                    <button onClick={()=>onAdd(contador)} type="button" class="btn btn-primary"> Agregar al Carrito </button>
+                    {/* <button onClick={()=>onAdd(contador)} type="button" class="btn btn-primary"> Agregar al Carrito </button> */}
+                    <button onClick = {onAdd} type="button" class="btn btn-primary"> Agregar al Carrito </button>
                 </div>
             </Fragment>
         );

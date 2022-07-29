@@ -52,5 +52,3 @@ const NavBar = () => {
 
 export default NavBar;
 
-{/* <img src={CardWidget} width="30" height="30" class="d-inline-block left" alt=""></img> */}
-

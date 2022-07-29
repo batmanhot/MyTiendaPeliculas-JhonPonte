@@ -1,11 +1,8 @@
 import React, {Component}   from 'react';
 import './App.css';
-// import Titulo from './components/title';
-// import Menu  from './components/navbar';
-// import Title from './components/title';
-// import Acordion from './components/acordion';
 import NavBar from './components/navbar';
 import ItemListContainer from './components/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer';
 
 function App() {
  
@@ -20,7 +17,8 @@ function App() {
   
    <div className="App">
         <NavBar/>
-        <ItemListContainer persona="Las mejores peliculas en español latino, " />        
+        {/* <ItemListContainer persona="Las mejores peliculas en español latino, " />  */}
+        <ItemDetailContainer/>
         <br/>
     </div>
   );

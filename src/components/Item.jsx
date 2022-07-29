@@ -6,11 +6,10 @@ const msjevacio = (cadena) => {
     return (
         alert(cadena+' proximamente mas información')
     )
-
 }
-const onAdd = (contador) => {
-    console.log(`Agregaste ${contador} items al Carrito de Compras`)    
-  }
+// const onAdd = (contador) => {
+//     console.log(`Agregaste ${contador} items al Carrito de Compras`)    
+//   }
 
 const Item = ({producto}) => {
     return (  
@@ -25,7 +24,7 @@ const Item = ({producto}) => {
          
                 <button onClick={()=>msjevacio(producto.name)} type="button" class="btn btn-primary"> Ver mas detalles </button>                
 
-                <ItemCount  pedidoinicio = {1} stockdisponible = {15} onAdd={onAdd}/>
+                {/* <ItemCount  pedidoinicio = {1} stockdisponible = {15} onAdd={onAdd}/> */}
             </div>            
         </div>
         

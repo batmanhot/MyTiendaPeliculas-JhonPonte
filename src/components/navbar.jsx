@@ -41,6 +41,9 @@ const NavBar = () => {
                   <li class="nav-item">
                     <Link className="nav-link" to="/categoria/Drama">Drama<FaPhotoVideo/></Link>
                   </li>
+                  <li class="nav-item">
+                    <Link className="nav-link" to="/categoria/Suspenso">Suspenso<FaPhotoVideo/></Link>
+                  </li>
                   
                   <li class="nav-item">
                     <Link className="nav-link" to="/carritodecompras">Carrito Compras <CartWidget/></Link>

@@ -3,24 +3,31 @@ import './App.css';
 import NavBar from './components/navbar';
 import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
-
-function App() {
- 
-    const articulo = {
-        nombre: "Licuadora Phillips",
-        urlImagen: "https://via.placeholder.com/64",
-        Descripciom: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim "
-    }
+import CarritodeCompras from './components/CarritodeCompras';
 
 
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import Home from './pages/home';
+
+function App() {    
     return(  
-  
-   <div className="App">
+    //  <div className="App">
+    // </div> 
+    <BrowserRouter>
         <NavBar/>
-        {/* <ItemListContainer persona="Las mejores peliculas en español latino, " />  */}
-        <ItemDetailContainer/>
+        <Routes>
+          <Route path='/' element={<Home/>}/> 
+          <Route path='/productos' element={<ItemListContainer persona="Las mejores peliculas en español latino, vealas ahora" />}/>
+          <Route path='/detalle/:id' element={<ItemDetailContainer/>}/>
+          <Route path='/categoria/:idCategoria' element={<ItemListContainer persona="Categoria ..."/>}/> 
+          <Route path='/carritodecompras' element={<CarritodeCompras/>}/> 
+        </Routes>  
+ 
+        {/* <ItemListContainer persona="Las mejores peliculas en español latino, " /> 
+        <ItemDetailContainer/> */}
         <br/>
-    </div>
+    </BrowserRouter>
+
   );
 }
 

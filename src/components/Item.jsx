@@ -1,5 +1,7 @@
 import React, { Fragment, useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import ItemCount from './ItemCount';
+
 
 
 const msjevacio = (cadena) => {
@@ -7,12 +9,13 @@ const msjevacio = (cadena) => {
         alert(cadena+' proximamente mas información')
     )
 }
-// const onAdd = (contador) => {
-//     console.log(`Agregaste ${contador} items al Carrito de Compras`)    
-//   }
 
 const Item = ({producto}) => {
+    const navegar = useNavigate();
+       
     return (  
+
+        
 
         <div class="card" style={{width: '18rem', margin: '.5rem'}}> 
             <img src={producto.url} class="card-img-top" alt={producto.name}/>
@@ -22,12 +25,14 @@ const Item = ({producto}) => {
                 <p class="card-text">S/. {producto.price}</p>
                 <p class="card-text">Stock: {producto.stock}</p>
          
-                <button onClick={()=>msjevacio(producto.name)} type="button" class="btn btn-primary"> Ver mas detalles </button>                
+                <button onClick={()=>navegar(`/detalle/${producto.id}`)} type="button" class="btn btn-primary"> Ver mas detalles </button>
+            </div>          
 
-                {/* <ItemCount  pedidoinicio = {1} stockdisponible = {15} onAdd={onAdd}/> */}
-            </div>            
         </div>
         
     );
 }
 export default Item;
+
+
+

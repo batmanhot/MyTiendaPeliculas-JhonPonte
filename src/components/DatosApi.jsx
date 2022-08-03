@@ -7,15 +7,17 @@ const productos = [
       url: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/wQh2ytX0f8IfC3b2mKpDGOpGTXS.jpg',
       price: 75,
       stock: 3,
-      description : "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, modi cupiditate. Eos culpa maxime molestiae incidunt facilis ex sint dignissimos. Est nihil eius necessitatibus impedit, beatae mollitia unde dolorum quos!"
-    },
+      description : "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, modi cupiditate. Eos culpa maxime molestiae incidunt facilis ex sint dignissimos. Est nihil eius necessitatibus impedit, beatae mollitia unde dolorum quos!",
+      category : "Accion"
+     },
      {
         id: '2',
         name: 'Peaky Blinders (2013)',
         url: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/yjX3ocrYTBUj3v5crEQgm03F4Zu.jpg',
         price: 31,
         stock: 5,
-        description : "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, modi cupiditate. Eos culpa maxime molestiae incidunt facilis ex sint dignissimos. Est nihil eius necessitatibus impedit, beatae mollitia unde dolorum quos!"
+        description : "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, modi cupiditate. Eos culpa maxime molestiae incidunt facilis ex sint dignissimos. Est nihil eius necessitatibus impedit, beatae mollitia unde dolorum quos!",
+        category : "Espionaje"
       },
       {
         id: '3',
@@ -23,7 +25,8 @@ const productos = [
         url: "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/4z9fsQTypbwzaWa4kLERtJjjM83.jpg",
         price: 26,
         stock: 1,
-        description : "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, modi cupiditate. Eos culpa maxime molestiae incidunt facilis ex sint dignissimos. Est nihil eius necessitatibus impedit, beatae mollitia unde dolorum quos!"        
+        description : "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, modi cupiditate. Eos culpa maxime molestiae incidunt facilis ex sint dignissimos. Est nihil eius necessitatibus impedit, beatae mollitia unde dolorum quos!",
+        category : "Accion"
       },
       {
         id: '4',
@@ -31,7 +34,8 @@ const productos = [
         url: "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/5eNrWoqKwpvrH8N4gajZsw0yUee.jpg",
         price: 67,
         stock: 6,
-        description : "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, modi cupiditate. Eos culpa maxime molestiae incidunt facilis ex sint dignissimos. Est nihil eius necessitatibus impedit, beatae mollitia unde dolorum quos!"
+        description : "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, modi cupiditate. Eos culpa maxime molestiae incidunt facilis ex sint dignissimos. Est nihil eius necessitatibus impedit, beatae mollitia unde dolorum quos!",
+        category : "Accion"
       },
       {
         id: '5',
@@ -39,7 +43,8 @@ const productos = [
         url: "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/z9gCSwIObDOD2BEtmUwfasar3xs.jpg",
         price: 11,
         stock: 3,
-        description : "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, modi cupiditate. Eos culpa maxime molestiae incidunt facilis ex sint dignissimos. Est nihil eius necessitatibus impedit, beatae mollitia unde dolorum quos!"
+        description : "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, modi cupiditate. Eos culpa maxime molestiae incidunt facilis ex sint dignissimos. Est nihil eius necessitatibus impedit, beatae mollitia unde dolorum quos!",
+        category : "Suspenso"
       },
       {
         id: '6',
@@ -47,7 +52,8 @@ const productos = [
         url: "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/zfC8bfoMZhaCxswi41CjesysfhZ.jpg",
         price: 88,
         stock: 9,
-        description : "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, modi cupiditate. Eos culpa maxime molestiae incidunt facilis ex sint dignissimos. Est nihil eius necessitatibus impedit, beatae mollitia unde dolorum quos!"
+        description : "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, modi cupiditate. Eos culpa maxime molestiae incidunt facilis ex sint dignissimos. Est nihil eius necessitatibus impedit, beatae mollitia unde dolorum quos!",
+        category : "Policial"
       },
       {
         id: '7',
@@ -55,7 +61,8 @@ const productos = [
         url: "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/gE2yLl3uhdSLla9urAR7HoYL3Yo.jpg",        
         price: 74,
         stock: 3,
-        description : "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, modi cupiditate. Eos culpa maxime molestiae incidunt facilis ex sint dignissimos. Est nihil eius necessitatibus impedit, beatae mollitia unde dolorum quos!"
+        description : "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, modi cupiditate. Eos culpa maxime molestiae incidunt facilis ex sint dignissimos. Est nihil eius necessitatibus impedit, beatae mollitia unde dolorum quos!",
+        category : "Terror"
       },
       {
         id: '8',
@@ -63,7 +70,8 @@ const productos = [
         url: "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/hUblG1KZCTRpHc3wqqoU0DW98Q3.jpg",
         price: 70,
         stock: 8,
-        description : "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, modi cupiditate. Eos culpa maxime molestiae incidunt facilis ex sint dignissimos. Est nihil eius necessitatibus impedit, beatae mollitia unde dolorum quos!"
+        description : "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, modi cupiditate. Eos culpa maxime molestiae incidunt facilis ex sint dignissimos. Est nihil eius necessitatibus impedit, beatae mollitia unde dolorum quos!",
+        category : "Terror"
       },
       {
         id: '9',
@@ -71,7 +79,8 @@ const productos = [
         url: "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/lfTm372lHNjQnnUwpdumVfUB0rh.jpg",
         price: 63,
         stock: 4,
-        description : "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, modi cupiditate. Eos culpa maxime molestiae incidunt facilis ex sint dignissimos. Est nihil eius necessitatibus impedit, beatae mollitia unde dolorum quos!"
+        description : "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, modi cupiditate. Eos culpa maxime molestiae incidunt facilis ex sint dignissimos. Est nihil eius necessitatibus impedit, beatae mollitia unde dolorum quos!",
+        category : "Ciencia Ficcion"
       },
       {
         id: '10',
@@ -79,7 +88,8 @@ const productos = [
         url: "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ubOaaQjDQ4lWtw1dkXhqsQWTsEY.jpg",
         price: 18,
         stock: 6,
-        description : "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, modi cupiditate. Eos culpa maxime molestiae incidunt facilis ex sint dignissimos. Est nihil eius necessitatibus impedit, beatae mollitia unde dolorum quos!"
+        description : "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, modi cupiditate. Eos culpa maxime molestiae incidunt facilis ex sint dignissimos. Est nihil eius necessitatibus impedit, beatae mollitia unde dolorum quos!",
+        category : "Drama"
       }
 ]
 

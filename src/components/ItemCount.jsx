@@ -18,10 +18,6 @@ const ItemCount =  ({ pedidoinicio, stockdisponible, onAdd }) => {
         }
     }
 
-    // const onAdd = (contador) => {
-    //     console.log(`Agregaste ${contador} items al Carrito de Compras`)    
-    //   }
-
        return (  
             <Fragment>                
                 <hr />

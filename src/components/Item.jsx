@@ -1,8 +1,8 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import ItemCount from './ItemCount';
+// import ItemCount from './ItemCount';
 
-
+//Tarjetas 
 
 const msjevacio = (cadena) => {
     return (
@@ -14,18 +14,18 @@ const Item = ({producto}) => {
     const navegar = useNavigate();
        
     return (  
-
         
-
         <div class="card" style={{width: '18rem', margin: '.5rem'}}> 
             <img src={producto.url} class="card-img-top" alt={producto.name}/>
             <div class="card-body">
                 <h5 class="card-title">{producto.name}</h5>
-                <p class="card-text">{producto.description}</p>
+                <p class="card-text">{producto.description.substring(0,220)}</p>               
                 <p class="card-text">S/. {producto.price}</p>
                 <p class="card-text">Stock: {producto.stock}</p>
-         
-                <button onClick={()=>navegar(`/detalle/${producto.id}`)} type="button" class="btn btn-primary"> Ver mas detalles </button>
+
+                <div class="col text-center">                    
+                    <button onClick={()=>navegar(`/detalle/${producto.id}`)} type="button" class="btn btn-primary"> Ver mas detalles </button>
+                </div>                                        
             </div>          
 
         </div>

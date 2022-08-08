@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const Home = () => {
+const CarritodeCompras = () => {
 
     const IraProductos = useNavigate()
 
@@ -42,4 +42,4 @@ const Home = () => {
      );
 }
  
-export default Home;
+export default CarritodeCompras;

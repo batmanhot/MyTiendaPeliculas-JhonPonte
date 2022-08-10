@@ -1,15 +1,15 @@
 import React, { Fragment } from 'react';
 import { useState } from 'react';
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-// const ItemCount =  ({ pedidoinicio, stockdisponible, onAdd }) => {
-const ItemCount =  ({ stockdisponible, cuenta, setcuenta, onAdd }) => {
+// const ItemCount =  ({ stockdisponible, cuenta, setcuenta, onAdd }) => {
+    const ItemCount =  ({ stockdisponible, onAdd }) => {
 
     const [contador, setcontador] = useState(1);
     const navegar = useNavigate()
 
     const resta = () => {
-        if (contador > cuenta ){
+        if (contador > 0 ){
             setcontador(contador-1);
         }
     }
@@ -29,7 +29,7 @@ const ItemCount =  ({ stockdisponible, cuenta, setcuenta, onAdd }) => {
                     <button onClick={suma} type="button" class="btn btn-success">+</button>
                     <br />                    
                     <br />                      
-                    <button onClick = {onAdd} type="button" class="btn btn-primary"> Agregar al Carrito de Compras </button>
+                    <button onClick = {()=>onAdd(contador)} type="button" class="btn btn-primary"> Agregar al Carrito de Compras </button>
                     <br />                      
                     <br />                      
                     <button onClick={()=>{navegar('/productos')}} className='btn btn-success'>Retornar a Catalogo Productos</button>

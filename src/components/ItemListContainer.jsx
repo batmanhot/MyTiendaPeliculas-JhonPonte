@@ -28,7 +28,6 @@ useEffect (()=> {
         .catch((error)=> console.log(error))
         .finally(()=>setLoading(false))
      },[idCategoria])
-//},[])
 
 
 console.log(ListaProductos);
@@ -40,8 +39,6 @@ console.log(ListaProductos);
                 <div>
 
                 {Loading ? <p>Cargando ....</p> : <ItemList ListaProductos={ListaProductos}/>}
-
-                {/* {ListaProductos.map((productos)=> <p key={productos.id}>{productos.name}</p>)} */}
                 
                 </div>
         </Fragment>                
@@ -49,6 +46,3 @@ console.log(ListaProductos);
 }
  
 export default ItemListContainer;
-
-
-// {/* <ItemCount  pedidoinicio = {1} stockdisponible = {15} onAdd={onAdd}/>  */}

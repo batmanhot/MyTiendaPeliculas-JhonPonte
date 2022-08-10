@@ -3,8 +3,12 @@ import loguito from '../img/reproductor.png';
 import CartWidget from './CartWidget'
 import { FaUser, FaPhotoVideo, FaRegHeart  } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { useCart } from '../Context/CartContext';
 
 const NavBar = () => {
+
+    const {cart} = useCart()
+
     return(                   
           <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 	          
@@ -46,7 +50,8 @@ const NavBar = () => {
                   </li>
                   
                   <li class="nav-item">
-                    <Link className="nav-link" to="/carritodecompras">Carrito Compras <CartWidget/></Link>
+                    {/* <Link className="nav-link" to="/carritodecompras">Carrito Compras <CartWidget/></Link> */}
+                    <CartWidget/>      
                   </li>
               </ul>                
             </div>

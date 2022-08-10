@@ -5,14 +5,16 @@ import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import CarritodeCompras from './components/CarritodeCompras';
 
-
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Home from './pages/home';
+import { CartProvider } from './Context/CartContext';
+
 
 function App() {    
     return(  
     //  <div className="App">
     // </div> 
+   <CartProvider> 
     <BrowserRouter>
         <NavBar/>
         <Routes>
@@ -24,6 +26,7 @@ function App() {
         </Routes>   
         <br/>
     </BrowserRouter>
+   </CartProvider> 
 
   );
 }

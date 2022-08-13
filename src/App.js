@@ -3,7 +3,7 @@ import './App.css';
 import NavBar from './components/navbar';
 import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
-import CarritodeCompras from './components/CarritodeCompras';
+import CarritodeCompras from './components/Cart';
 
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Home from './pages/home';

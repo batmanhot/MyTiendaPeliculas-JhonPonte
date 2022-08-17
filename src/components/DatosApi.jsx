@@ -1,8 +1,7 @@
 // https://www.themoviedb.org/ : Web de Peliculas
 
-const productos = [
+export const productos = [
     {
-      id: '1',
       name: 'Lucifer',      
       url: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/wQh2ytX0f8IfC3b2mKpDGOpGTXS.jpg',
       price: 75,
@@ -11,7 +10,7 @@ const productos = [
       category : "Accion"
      },
      {
-        id: '2',
+        //id: '2',
         name: 'Peaky Blinders (2013)',
         url: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/yjX3ocrYTBUj3v5crEQgm03F4Zu.jpg',
         price: 31,
@@ -20,7 +19,7 @@ const productos = [
         category : "Espionaje"
       },
       {
-        id: '3',
+        //id: '3',
         name: "Malnazidos",
         url: "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/4z9fsQTypbwzaWa4kLERtJjjM83.jpg",        
         price: 26,
@@ -29,7 +28,7 @@ const productos = [
         category : "Accion"
       },
       {
-        id: '4',
+        //id: '4',
         name: "UnCharted",        
         url: "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6hlI9Ea1O4IeJ2cj7OiNinqg8Qd.jpg",
         price: 67,
@@ -38,7 +37,7 @@ const productos = [
         category : "Accion"
       },
       {
-        id: '5',
+        //id: '5',
         name: "Juego de tronos",
         url: "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/z9gCSwIObDOD2BEtmUwfasar3xs.jpg",
         price: 11,
@@ -47,7 +46,7 @@ const productos = [
         category : "Suspenso"
       },
       {
-        id: '6',
+        //id: '6',
         name: "Asesino sin Memoria",
         url: "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/zfC8bfoMZhaCxswi41CjesysfhZ.jpg",
         price: 88,
@@ -56,7 +55,7 @@ const productos = [
         category : "Policial"
       },
       {
-        id: '7',
+        //id: '7',
         name: "Maleficio",
         url: "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/gE2yLl3uhdSLla9urAR7HoYL3Yo.jpg",        
         price: 74,
@@ -65,7 +64,7 @@ const productos = [
         category : "Terror"
       },
       {
-        id: '8',
+        //id: '8',
         name: "The Walking Dead",
         url: "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/hUblG1KZCTRpHc3wqqoU0DW98Q3.jpg",
         price: 70,
@@ -74,7 +73,7 @@ const productos = [
         category : "Terror"
       },
       {
-        id: '9',
+        //id: '9',
         name: "Halo",
         url: "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/lfTm372lHNjQnnUwpdumVfUB0rh.jpg",
         price: 63,
@@ -83,7 +82,7 @@ const productos = [
         category : "Ciencia Ficcion"
       },
       {
-        id: '10',
+        //id: '10',
         name: "The Good Doctor",
         url: "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ubOaaQjDQ4lWtw1dkXhqsQWTsEY.jpg",
         price: 18,
@@ -92,7 +91,7 @@ const productos = [
         category : "Drama"
       },
       {
-        id: '11',
+        //id: '11',
         name: "La Princesa",
         url: "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/7uEh9kpQWJgaebgPXVCPf88wsFe.jpg",
         price: 18,
@@ -101,7 +100,7 @@ const productos = [
         category : "Accion"
       },
       {
-        id: '12',
+        //id: '12',
         name: "Colision",
         url: "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/t2Bw6Yl4aiflTUXKW3CZ6xtjciy.jpg",
         price: 18,
@@ -110,7 +109,7 @@ const productos = [
         category : "Accion"
       },
       {
-        id: '13',
+        //id: '13',
         name: "SandMan",
         url: "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/b7EIwmXtQBEyrLHcUEyuJxPoARk.jpg",
         price: 18,
@@ -119,7 +118,7 @@ const productos = [
         category : "Terror"
       },
       {
-        id: '14',
+        //id: '14',
         name: "Elvis",
         url: "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/FTBDId0Ntc8YmJpolZe8fLJcoI.jpg",
         price: 18,
@@ -130,7 +129,7 @@ const productos = [
 ]
 
 export const data = new Promise((resolve, reject) => {
-    var condicion = true
+    let condicion = true
     setTimeout(() => {
         if(condicion){
             resolve(productos)

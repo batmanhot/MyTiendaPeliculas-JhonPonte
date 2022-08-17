@@ -14,8 +14,8 @@ const Item = ({producto}) => {
        
     return (  
         
-        <div class="card" style={{width: '18rem', margin: '.5rem'}}> 
-            <img src={producto.url} class="card-img-top" alt={producto.name}/>
+        <div class="card" style={{width: '22rem', margin: '.5rem'}}> 
+            <img src={producto.url} class="card-img-top" alt={producto.name} height='500rem'/>
             <div class="card-body">
                 <h5 class="card-title">{producto.name}</h5>
                 <p class="card-text">{producto.description.substring(0,220)}</p>               

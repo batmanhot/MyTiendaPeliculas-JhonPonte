@@ -1,4 +1,5 @@
 import React, {Component}   from 'react';
+import { useEffect } from 'react';
 import './App.css';
 import NavBar from './components/navbar';
 import ItemListContainer from './components/ItemListContainer';
@@ -9,8 +10,23 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Home from './pages/home';
 import { CartProvider } from './Context/CartContext';
 
+import { db } from './components/dbFirestore'
+import {collection, addDoc} from 'firebase/firestore'
+// import { productos } from './components/DatosApi';
+
 
 function App() {    
+
+  //UNA SOLA VEZ SE HACE DESPUES SE BORRA O SE COMENTA
+  //Agrega items del array productos de DatosAPI
+
+  //  useEffect(()=>{
+  //     const productsCollection = collection(db, "items-ecommerce")
+  //     productos.map((item)=> addDoc(productsCollection, item))
+  //     console.log(productos)
+  //  },[])
+
+  
     return(  
     //  <div className="App">
     // </div> 

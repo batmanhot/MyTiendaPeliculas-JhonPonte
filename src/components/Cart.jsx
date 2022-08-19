@@ -10,7 +10,7 @@ const  Cart = () => {
         <div>
             {!cart.length ?
             <>
-            <div class="card text-center" style={{width: '30rem', margin: '1rem', margin:'auto', display:'flex' , alignitems: 'center', justifycontent:'center', padding:'1rem', marginTop:'6rem' }}> 
+            <div class="card text-center" style={{width: '30rem', margin:'auto', display:'flex' , alignitems: 'center', justifycontent:'center', padding:'1rem', marginTop:'6rem' }}> 
                 <img src='https://www.bancodebogota.com/wps/themes/html/banco-de-bogota/landings/pospago/images/temporada.jpg' class="card-img-top" alt="hola" />
 
                 <div class="card-body">
@@ -66,7 +66,7 @@ const  Cart = () => {
             <div class="container" style={{border: '6px double', padding:'1rem'}}>
                 <div class="row"  >
                     <div class="col-11" style={{margin:'auto', display:'flex' , alignitems: 'center', justifycontent:'center', textAlign:'center'}}>                  
-                        <button style={{margin:'auto', display:'flex' , alignitems: 'center', justifycontent:'center', width: '12rem', textAlign:'center'}} className="btn btn-success">Terminar Compra de productos</button>
+                        <button style={{margin:'auto', display:'flex' , alignitems: 'center', justifycontent:'center', width: '12rem', textAlign:'center'}} className="btn btn-success" onClick={()=>navegar('/checkout')}>Terminar Compra de productos</button>
                         <button style={{margin:'auto', display:'flex' , alignitems: 'center', justifycontent:'center', width: '12rem', textAlign:'center'}} className="btn btn-danger" onClick={emptyCart}>Vaciar Carrito de Compras</button>
                     </div>                    
                 </div>

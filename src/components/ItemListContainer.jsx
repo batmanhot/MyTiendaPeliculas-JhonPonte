@@ -6,6 +6,7 @@ import { useParams } from 'react-router-dom';
 
 import { db } from "./dbFirestore"
 import { getDocs, collection, query, where } from "firebase/firestore";
+import LoadingSpinner from "./LoadingSpinner";
 
 
 const ItemListContainer =  (props) => {
@@ -60,7 +61,8 @@ useEffect(()=>{
                 <center><h2>{props.persona}</h2> </center>
                 <div>
 
-                {Loading ? <p>Cargando ....</p> : <ItemList ListaProductos={ListaProductos}/>}
+                {/* {Loading ? <p>Cargando ....</p> : <ItemList ListaProductos={ListaProductos}/>} */}
+                {Loading ? <LoadingSpinner /> : <ItemList ListaProductos={ListaProductos}/>} 
                 
                 </div>
         </Fragment>                

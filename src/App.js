@@ -5,15 +5,17 @@ import NavBar from './components/navbar';
 import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import CarritodeCompras from './components/Cart';
+import {CartProvider} from './Context/CartContext';
 
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Home from './pages/home';
-import { CartProvider } from './Context/CartContext';
 
 import { db } from './components/dbFirestore'
 import {collection, addDoc} from 'firebase/firestore'
-// import { productos } from './components/DatosApi';
+import Checkout from './components/CheckOut'
+import { Button, Spinner } from 'react-bootstrap'
 
+// import { productos } from './components/DatosApi';
 
 function App() {    
 
@@ -30,15 +32,31 @@ function App() {
     return(  
     //  <div className="App">
     // </div> 
+
    <CartProvider> 
     <BrowserRouter>
         <NavBar/>
+        {/* <div>
+          <Button variant="dark" disabled>
+              <Spinner
+                as="span"
+                variant="light"
+                size="sm"
+                role="status"
+                aria-hidden="true"
+                animation="border"/>
+                   Loading...
+           </Button>
+        </div> */}
+
+
         <Routes>
           <Route path='/' element={<Home/>}/> 
           <Route path='/productos' element={<ItemListContainer persona="Las mejores peliculas en español latino, vealas ahora" />}/>
           <Route path='/detalle/:id' element={<ItemDetailContainer/>}/>
           <Route path='/categoria/:idCategoria' element={<ItemListContainer persona="Categoria ..."/>}/> 
           <Route path='/carritodecompras' element={<CarritodeCompras/>}/> 
+          <Route path='/CheckOut' element={<Checkout/>}/>         
         </Routes>   
         <br/>
     </BrowserRouter>

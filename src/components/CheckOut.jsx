@@ -2,28 +2,36 @@ import React, { useState } from 'react'
 import {collection, addDoc, serverTimestamp} from 'firebase/firestore'
 import { db } from './dbFirestore'
 import { useCart } from "../Context/CartContext"
-// import CartItem from "./CartItem";
-import { useNavigate, Navigate } from 'react-router-dom'
-
+import { useNavigate } from 'react-router-dom'
+import { FaShoppingCart } from 'react-icons/fa'
+import { IoBagCheckOutline } from "react-icons/io5";
+import { AiFillHome } from "react-icons/ai"
 
 const Checkout = () => {
     const navegar = useNavigate()
     
-    const[comprador, setComprador]= useState({})
-    const [orderId, setOrderId]= useState('')
+    const [comprador, setComprador]= useState({})
+    const [orderId, setOrderId]= useState('')    
     const {cart, cartTotal, emptyCart}= useCart()
+    // let faltaInformacion = false
 
+
+    // const [nombre, setNombre] = useState('')
+    // const [email, setEmail] = useState('')
+    // const [telefonop, setTelefonop] = useState('')
+    
     const datosComprador = (e) => {
+        // let faltaInformacion = false
         setComprador({
             ...comprador,
             [e.target.name]: e.target.value
-        })
+        })      
     }
 
     const finalizarCompra = (e) =>{
         e.preventDefault()
        if(Object.values(comprador).length !== 3 ){
-            alert('todos los campos son obligatorios')
+            alert('todos los campos son obligatorios'); 
        }else{
         const ventasCollection = collection(db, "ventas")
         addDoc(ventasCollection,{
@@ -41,53 +49,73 @@ const Checkout = () => {
     }
 
   return (
-   <>
+   <>    
     {!orderId 
     ?<div>
-        <div class="container">
-            <div class="row mt-3">
-                <div class="col-10">
+        <div class="container" style={{width:'50%'}}>
+
+            <div class="row mt-5">
+                <div class="col-12">
                     <div class="card">
-                        <div class="card-body text-center">
-                            <h2>CHECKOUT - FINALIZACION DE COMPRA</h2>
-                        </div>
-                    </div>
-                </div>			
-            </div>
-            <div class="row mt-9">
-                <div class="col-10">
-                    <div class="card">
+                        <div class="card-header text-center text-muted"><h2><IoBagCheckOutline size={'2rem'}/>CHECKOUT - FINALIZACION DE COMPRA</h2></div>
+
                         <img class="card-img-top" src="img/bg.jpg" alt=""/>
                         <div class="card-body">
                             <h5 class="card-title">Finalizacion de Compra</h5>
-                            <h6 class="card-subtitle text-muted mb-2">La informacion proporcionada nos sirve para identificar la compra, esta no sera compartida con nadie</h6> 
-                            <br />
-                            <form onSubmit={finalizarCompra}>
+                            <h6 class="card-subtitle text-muted">La informacion proporcionada nos sirve para identificar la compra, esta no sera compartida con nadie</h6> 
+                            <br />                
+
+                            <form onSubmit= {finalizarCompra} >
+                             
                                 <div class="form-group">
-                                    <label for="Nombres">Nombres y Apellidos</label>
-                                    <input type="text" class="form-control" id="Nombres" aria-describedby="NombresHelp" placeholder="Nombres y Apellidos Completo" name='name'onChange={datosComprador} />
+                                    <label for="Nombres" class="text-muted"><h6>Nombres y Apellidos</h6></label>
+                                    <input type="text" class="form-control" id="Nombres" required aria-describedby="NombresHelp" placeholder="Nombres y Apellidos Completo" 
+                                     name='name' onChange={datosComprador}  />                                               
                                     {/* <small id="NombresHelp" class="form-text text-muted">Nunca compartiremos sus datos con nadie más</small> */}
+                                    <div class='valid-feedback'>
+                                        todo bien
+                                    </div>
+                                    <div class='invalid-feedback'>
+                                        no ha salido bien
+                                    </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="Email">Correo Electronico</label>
-                                    <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="correo@mail.com" name='email' onChange={datosComprador}/>
-                                    {/* <small id="emailHelp" class="form-text text-muted">Nunca compartiremos tu correo electrónico con nadie más</small> */}
+                                    <label for="Email" class="text-muted"><h6>Correo Electronico</h6></label>
+                                    <input type="email" class="form-control" id="Email" required aria-describedby="emailHelp" placeholder="correo@mail.com" name='email' 
+                                    onChange={datosComprador}/>
+
+                                    <div class='valid-feedback'>
+                                        todo bien
+                                    </div>
+                                    <div class='invalid-feedback'>
+                                        no ha salido bien
+                                    </div>
                                 </div>           
                                 <div class="form-group">
-                                    <label for="Telefono">Telefono</label>
-                                    <input type="number" class="form-control" id="Telefono" aria-describedby="TelefonoHelp" placeholder="Telefono ó Celular" name='telefone'onChange={datosComprador}/>
-                                    {/* <small id="TelefonoHelp" class="form-text text-muted">Nunca compartiremos tu telefono con nadie más.</small> */}
+                                    <label for="Telefono" class="text-muted"><h6>Telefono</h6></label>
+                                    <input type="number" class="form-control" id="Telefono" required aria-describedby="TelefonoHelp" placeholder="Telefono ó Celular" name='telefono'onChange={datosComprador}/>
+                                    
+                                    <div class='valid-feedback'>
+                                        todo bien
+                                    </div>
+                                    <div class='invalid-feedback'>
+                                        no ha salido bien
+                                    </div>
                                 </div>
                                 <br />
 
-                                <div class="form-group">                                    
-                                    <h5 class="card-title text-center">Total a Pagar S/. {cartTotal()}</h5>
-                                </div>                                
-                                <div class="card-footer text-center">
-                                    <button type="submit" class="btn btn-primary">Finalizar Compra</button>
+                                <div class="bg-secondary text-white mb-3"> 
+                                    <h4 class="card-title text-center p-2">Total a Pagar S/. {cartTotal()}</h4>
+                                </div>          
+                                <br />
+                                <div class="text-center">                                        
+                                    <button type="submit" class="btn btn-primary"> <FaShoppingCart size={'2rem'}/> Finalizar Compra</button>
                                 </div>
+                                                        
                             </form>
+
+
                         </div>
                     </div>
                 </div>
@@ -117,7 +145,7 @@ const Checkout = () => {
                         </div> 
 
                         <div class="card-footer text-center">
-                            <button onClick={()=>navegar('/productos')} class="btn btn-primary">Volver a la Home</button>
+                            <button onClick={()=>navegar('/')} class="btn btn-primary"><AiFillHome size={'2rem'}/> Volver a la Home</button>
                         </div>
                     </div>
                 </div>

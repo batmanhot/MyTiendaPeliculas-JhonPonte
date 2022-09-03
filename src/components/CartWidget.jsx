@@ -11,7 +11,7 @@ import { useCart } from '../Context/CartContext';
 
      return(
      <Link className="nav-link" to="/carritodecompras"> 
-       <FaShoppingCart/> 
+       <FaShoppingCart size={'2rem'}/> 
        <span> {cartQuantity() || '' }</span> 
      </Link> 
      )

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../Context/CartContext";
 import ItemCount from "./ItemCount";
+import { MdProductionQuantityLimits } from "react-icons/md"
+import { FaShoppingCart } from 'react-icons/fa'
 
 const ItemDetail = ({producto}) => {
 
@@ -24,11 +26,9 @@ const ItemDetail = ({producto}) => {
 
     return ( 
      <div>
-            <div className="container">
-                <div className="row mt-6">
-                    <div className="col-8 center my-5">
-                        <div className="card border-primary">
-                                <div className="card-header">BIENVENIDOS A PELICULAS DIGITALES</div>                            
+
+                <div className="m-3 row justify-content-center ">
+                        <div className="card border-primary shadow-sm" style={{width:'35rem'}}>                                
                             <div className="card-body">                                                    
                                 <div className="container text-center">
                                     <div className="row">
@@ -36,22 +36,22 @@ const ItemDetail = ({producto}) => {
                                             <h3 className="card-title center" >{producto.name.toUpperCase()}</h3>
                                         </div>                                    
                                     </div>                                    
-                                    <img style={{width:'60%', height:'60%'}} src={producto.url} className="card-img-top" alt={producto.name} /> 
-                                    <br /><br /><br />                                    
+                                    <img style={{width:'50%'}} src={producto.url} className="card-img-top" alt={producto.name} /> 
+                                    <hr />
                                     <p className="card-text">{producto.description}</p>
                                     <hr />
-                                    <h6 className="card-title center" >PRECIO: S/. {producto.price}  STOCK: {producto.stock}  CATEGORIA: {producto.category.toUpperCase()}</h6>
+                                    <p className="card-title center" >PRECIO: S/. {producto.price}  STOCK: {producto.stock}  CATEGORIA: {producto.category.toUpperCase()}</p>
                                 </div> 
                                 
                                 <div class="container">
                                     <div class="row">
                                         <div class="col text-center">                                                                       
                                         {compra ? <div>
-                                                        <hr />
-                                                        <button onClick={()=>{navegar('/productos')}} className='btn btn-info' >Seguir Comprando </button>
-                                                        <br />                                                        
-                                                        <br />
-                                                        <button onClick={()=>{navegar('/carritodecompras')}} className='btn btn-success'>Ir al Carrito Compras</button>
+                                                    <hr />
+                                                        {/*   */}
+                                                        <button onClick={()=>{navegar('/productos')}} style={{margin:'0px 10px 0px -6px'}} className='btn btn-info p-2'><MdProductionQuantityLimits size={'2rem'}/> Seguir Comprando </button>
+                                                        {/*  */}
+                                                        <button onClick={()=>{navegar('/carritodecompras')}} style={{margin:'0px 10px 0px 6px'}} className='btn btn-success p-2'><FaShoppingCart size={'2rem'}/> Ir Carrito Compras</button>
                                                 </div>                                                
                                                 :<ItemCount stockdisponible={producto.stock} onAdd={onAdd}/>}                                               
                                         </div>
@@ -59,9 +59,7 @@ const ItemDetail = ({producto}) => {
                                 </div>
                             </div>
                         </div>
-                    </div>		
-                </div>
-            </div>                
+                </div> 
     </div> 
     );
 }

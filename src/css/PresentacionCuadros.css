@@ -1,0 +1,27 @@
+.ovalado {
+    margin: 0 auto;      
+    width: 25rem;
+    height: 10rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    text-align: center;    
+    border-style: solid !important;
+}
+
+.imgRedonda {
+    padding: 1 auto;
+    margin: 1rem;
+    width:18rem;
+    height:13rem;    
+    border-radius: 50%;
+    border-style: solid !important;
+}
+
+.imgCuadrado {
+    padding: 0 auto;
+    margin: 0rem;
+    width:17rem;
+    height:20rem;        
+    border-style: solid !important;
+}

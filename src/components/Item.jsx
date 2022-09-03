@@ -1,7 +1,8 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { BiDetail } from "react-icons/bi"
 
-//Tarjetas 
+// Tarjetas
 
 const msjevacio = (cadena) => {
     return (
@@ -23,15 +24,10 @@ const Item = ({producto}) => {
                 <p class="card-text">Stock: {producto.stock}</p>
 
                 <div class="col text-center">                    
-                    <button onClick={()=>navegar(`/detalle/${producto.id}`)} type="button" class="btn btn-primary"> Ver mas detalles </button>
+                    <button onClick={()=>navegar(`/detalle/${producto.id}`)} type="button" class="btn btn-primary"> <BiDetail size={'2rem'}/> Ver mas detalles </button>
                 </div>                                        
-            </div>          
-
-        </div>
-        
+            </div>
+        </div>        
     );
 }
 export default Item;
-
-
-

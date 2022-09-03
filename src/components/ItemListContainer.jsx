@@ -58,10 +58,9 @@ useEffect(()=>{
 
        return (  
         <Fragment>
-                <center><h2>{props.persona}</h2> </center>
+                <center><h2 style={{color:'white'}}>{props.persona}</h2> </center>
                 <div>
-
-                {/* {Loading ? <p>Cargando ....</p> : <ItemList ListaProductos={ListaProductos}/>} */}
+     
                 {Loading ? <LoadingSpinner /> : <ItemList ListaProductos={ListaProductos}/>} 
                 
                 </div>

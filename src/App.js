@@ -13,9 +13,6 @@ import Home from './pages/home';
 import { db } from './components/dbFirestore'
 import {collection, addDoc} from 'firebase/firestore'
 import Checkout from './components/CheckOut'
-import { Button, Spinner } from 'react-bootstrap'
-
-// import { productos } from './components/DatosApi';
 
 function App() {    
 
@@ -34,27 +31,13 @@ function App() {
     // </div> 
 
    <CartProvider> 
-    <BrowserRouter>
-        <NavBar/>
-        {/* <div>
-          <Button variant="dark" disabled>
-              <Spinner
-                as="span"
-                variant="light"
-                size="sm"
-                role="status"
-                aria-hidden="true"
-                animation="border"/>
-                   Loading...
-           </Button>
-        </div> */}
-
-
+    <BrowserRouter>        
+        <NavBar/>                        
         <Routes>
           <Route path='/' element={<Home/>}/> 
-          <Route path='/productos' element={<ItemListContainer persona="Las mejores peliculas en español latino, vealas ahora" />}/>
+          <Route path='/productos' element={<ItemListContainer persona="LAS MEJORES PELICULAS EN ESPAÑOL LATINO, VEALAS AHORA" />}/>
           <Route path='/detalle/:id' element={<ItemDetailContainer/>}/>
-          <Route path='/categoria/:idCategoria' element={<ItemListContainer persona="Categoria ..."/>}/> 
+          <Route path='/categoria/:idCategoria' element={<ItemListContainer persona="CATEGORIA"/>}/>
           <Route path='/carritodecompras' element={<CarritodeCompras/>}/> 
           <Route path='/CheckOut' element={<Checkout/>}/>         
         </Routes>   

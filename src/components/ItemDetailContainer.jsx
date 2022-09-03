@@ -1,10 +1,12 @@
 import React,{ useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { data } from "./DatosApi";
+// import { data } from "./DatosApi";
 import ItemDetail from "./ItemDetail";
 
 import { db } from "./dbFirestore"
 import { getDoc, collection, doc, } from "firebase/firestore";
+import LoadingSpinner from "./LoadingSpinner";
+
 
 
 const ItemDetailContainer = () => {
@@ -29,13 +31,14 @@ const ItemDetailContainer = () => {
         //La referencia de que tiene q traer (id)
         const referenciaDoc = doc(coleccionProductos, id)
         //traemos un solo documento
-        getDoc(referenciaDoc)
-        .then((result)=>{
-            setproducto({
-            id:result.id,
-            ...result.data()
+        getDoc(referenciaDoc)        
+        .then((result)=>{      
+
+               setproducto({
+                id:result.id,
+               ...result.data()             
           })
-        })
+        })    
         .catch((error)=> console.log(error))
         .finally(()=> setloading(false))
      },[id])
@@ -45,7 +48,7 @@ const ItemDetailContainer = () => {
 
     return(    
         <div>
-         {loading ? <p> Loading </p>  : <ItemDetail producto={producto}/>}         
+         {loading ? <LoadingSpinner />  : <ItemDetail producto={producto}/>}
         </div> 
     );
 }

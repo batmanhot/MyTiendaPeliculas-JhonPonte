@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react';
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
+import { MdProductionQuantityLimits } from "react-icons/md"
+import { FaShoppingCart } from 'react-icons/fa'
 
 // const ItemCount =  ({ stockdisponible, cuenta, setcuenta, onAdd }) => {
     const ItemCount =  ({ stockdisponible, onAdd }) => {
@@ -28,11 +30,11 @@ import { useNavigate } from "react-router-dom";
                      <span class="fw-bold"> Cantidad {contador} </span>                     
                     <button onClick={suma} type="button" class="btn btn-success">+</button>
                     <br />                    
-                    <br />                      
-                    <button onClick = {()=>onAdd(contador)} type="button" class="btn btn-primary"> Agregar al Carrito de Compras </button>
-                    <br />                      
-                    <br />                      
-                    <button onClick={()=>{navegar('/productos')}} className='btn btn-success'>Retornar a Catalogo Productos</button>
+                    <br />                  
+                    <div class="m-0 justify-content-center">
+                        <button onClick = {()=>onAdd(contador)} type="button" class="btn btn-primary p-2" style={{margin:'0px 10px 0px -6px'}}><FaShoppingCart size={'2rem'}/> Carrito de Compras </button>                        
+                        <button onClick={()=>{navegar('/productos')}} className='btn btn-success p-2' style={{margin:'0px 10px 0px 6px'}}> <MdProductionQuantityLimits size={'2rem'}/> Retornar a Productos</button>
+                    </div>    
                 </div>
             </Fragment>
         );

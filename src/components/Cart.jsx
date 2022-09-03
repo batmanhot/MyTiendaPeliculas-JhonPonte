@@ -14,15 +14,15 @@ const  Cart = () => {
             {!cart.length ?
             <>
             {/* // --- Cuando el Carrito esta vacio */}
-                <div class="card text-center" style={{width: '30rem', margin:'auto', display:'flex' , alignitems: 'center', justifycontent:'center', padding:'1rem', marginTop:'6rem' }}> 
-                    <img src='https://www.bancodebogota.com/wps/themes/html/banco-de-bogota/landings/pospago/images/temporada.jpg' class="card-img-top" alt="hola" />
+                <div className="card text-center" style={{width: '30rem', margin:'auto', display:'flex' , alignitems: 'center', justifycontent:'center', padding:'1rem', marginTop:'6rem' }}> 
+                    <img src='https://www.bancodebogota.com/wps/themes/html/banco-de-bogota/landings/pospago/images/temporada.jpg' className="card-img-top" alt="hola" />
 
-                    <div class="card-body">
-                        <h5 class="card-title">Tu Carrito de Compras esta vacio</h5>
+                    <div className="card-body">
+                        <h5 className="card-title">Tu Carrito de Compras esta vacio</h5>
                         <hr />
-                        <p class="card-text">Te invitamos a recorrer nuestros articulos disponibles y aproveche nuestra ofertas de temporada, no lo piense mas y compre ahora antes que se acaben !!</p>                    
-                        <div class="col text-center">                                       
-                            <button class="btn btn-primary" onClick={()=> navegar('/productos')}> <BiDetail size={'2rem'}/> Vea nuestros Catalogos de Productos</button> 
+                        <p className="card-text">Te invitamos a recorrer nuestros articulos disponibles y aproveche nuestra ofertas de temporada, no lo piense mas y compre ahora antes que se acaben !!</p>                    
+                        <div className="col text-center">                                       
+                            <button className="btn btn-primary" onClick={()=> navegar('/productos')}> <BiDetail size={'2rem'}/> Vea nuestros Catalogos de Productos</button> 
                         </div>                                        
                     </div>                     
                 </div>
@@ -31,28 +31,28 @@ const  Cart = () => {
             :            
             <>            
             {/* // --- Cuando el Carrito esta lleno */}            
-            <div class="container">
-                <div class="card text-center">
-                    <div class="card-header text-muted">
+            <div className="container">
+                <div className="card text-center">
+                    <div className="card-header text-muted">
                         <h6 style={{margin:'auto'}}>TU CARRITO DE COMPRAS</h6>
                     </div>
-                    <div class="row card-header text-muted">        
-                        <div class="col-2" style={{display:'flex' }}>
+                    <div className="row card-header text-muted">        
+                        <div className="col-2" style={{display:'flex' }}>
                             <h6 style={{margin:'auto'}}>IMAGEN</h6>
                         </div>
-                        <div class="col-4" style={{display:'flex'}}>                        
+                        <div className="col-4" style={{display:'flex'}}>                        
                             <h6 style={{margin:'auto'}}>NOMBRE DE PRODUCTO</h6>
                         </div>
-                        <div class="col-1" style={{display:'flex'}}>
+                        <div className="col-1" style={{display:'flex'}}>
                             <h6 style={{margin:'auto'}}>CANTIDAD</h6>
                         </div>
-                        <div class="col-2" style={{display:'flex'}}>
+                        <div className="col-2" style={{display:'flex'}}>
                             <h6 style={{margin:'auto'}}>PRECIO</h6>
                         </div>
-                        <div class="col-2" style={{display:'flex'}}>
+                        <div className="col-2" style={{display:'flex'}}>
                             <h6 style={{margin:'auto'}}>SUB TOTAL</h6>
                         </div>
-                        <div class="col-1" style={{display:'flex'}}>
+                        <div className="col-1" style={{display:'flex'}}>
                             <h6 style={{margin:'auto'}}>ELIMINAR ITEM <AiFillDelete/> </h6>
                         </div>
                     </div> 
@@ -61,17 +61,17 @@ const  Cart = () => {
 
             {cart.map((articulo)=><CartItem key={articulo.id}  articulo={articulo}/>)}
 
-            <div class="container">
-                <div class="card text-center">
-                    <div class="card-header text-muted">
+            <div className="container">
+                <div className="card text-center">
+                    <div className="card-header text-muted">
                         <h6 style={{margin:'auto'}} > TOTAL A PAGAR S/. {cartTotal()} </h6>
                     </div>
-                    <div class="row">        
-                        {/* <div class="col-12" style={{display:'flex'}} >
+                    <div className="row">        
+                        {/* <div className="col-12" style={{display:'flex'}} >
                             <h5 style={{margin:'auto'}} > TOTAL A PAGAR S/. {cartTotal()} </h5>
                         </div> */}                        
-                        <div class="card-footer mt-1 mb-2">
-                            <div class="col-12" style={{display:'flex'}}>
+                        <div className="card-footer mt-1 mb-2">
+                            <div className="col-12" style={{display:'flex'}}>
                                 <button style={{margin: 'auto'}} className="btn btn-success p-3" onClick={()=>navegar('/checkout')}><GiFinishLine size={'2rem'}/> Terminar Compra de productos </button>
                                 <button style={{margin: 'auto'}} className="btn btn-danger p-3" onClick={emptyCart}>  <GiEmptyWoodBucketHandle size={'2rem'}/> Vaciar Carrito de Compras </button>
                             </div>                                                                        

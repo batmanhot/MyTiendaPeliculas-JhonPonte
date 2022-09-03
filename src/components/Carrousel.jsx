@@ -83,32 +83,32 @@ class Carrousel extends Component {
             {/* <img src={item.src} alt={item.altText}  style={{display: 'flex', width: '25rem', height: '30%', margin: '0 auto', overflow: 'hidden',  justifycontent: 'center'}}/> */}
 
             {/* // Carrousel de Varias Imagenes */}
-            <div class="col-sm-12">
-                <div class="card bg-dark text-white" >
-                    <h5 class="card-header text-center bg-secondary text-white">LAS MEJORES CRITICAS DEL AÑO</h5>
-                    <div class="card-body" >    
+            <div className="col-sm-12">
+                <div className="card bg-dark text-white" >
+                    <h5 className="card-header text-center bg-secondary text-white">LAS MEJORES CRITICAS DEL AÑO</h5>
+                    <div className="card-body" >    
                         
-                        <div class="m-0 row justify-content-center">
+                        <div className="m-0 row justify-content-center">
                             {/* bg-warning text-dark p-2 text-center */}
-                            <div class="col-auto text-dark p-2 text-center ">                          
-                                <img class="imgCuadrado img-thumbnail img-responsive" 
+                            <div className="col-auto text-dark p-2 text-center ">                          
+                                <img className="imgCuadrado img-thumbnail img-responsive" 
                                      src={maverick} alt="Primer slide"></img> 
-                                <div class="col-sm-13" style={{fontWeight:'bold'}}>TOP GUN 2 - MAVERICK</div> 
+                                <div className="col-sm-13" style={{fontWeight:'bold'}}>TOP GUN 2 - MAVERICK</div> 
                             </div>
-                            <div class="col-auto text-dark p-2 text-center ">
-                                <img class="imgCuadrado img-fluid card-img img-thumbnail" 
+                            <div className="col-auto text-dark p-2 text-center ">
+                                <img className="imgCuadrado img-fluid card-img img-thumbnail" 
                                 src = {lucifer} alt="Segundo Slide"></img>                                                            
-                                <div class="col-sm-13" style={{fontWeight:'bold'}}>LUCIFER</div>                    
+                                <div className="col-sm-13" style={{fontWeight:'bold'}}>LUCIFER</div>                    
                             </div>                            
-                            <div class="col-auto text-dark p-2 text-center">
-                                <img class="imgCuadrado img-fluid card-img img-thumbnail" 
+                            <div className="col-auto text-dark p-2 text-center">
+                                <img className="imgCuadrado img-fluid card-img img-thumbnail" 
                                  src={sandman}  alt="Tercer slide"></img>                                
-                                <div class="col-sm-13" style={{fontWeight:'bold'}}>SANDMAN</div>
+                                <div className="col-sm-13" style={{fontWeight:'bold'}}>SANDMAN</div>
                             </div>
-                            <div class="col-auto text-dark p-2 text-center">
-                                <img class="imgCuadrado img-fluid card-img img-thumbnail" 
+                            <div className="col-auto text-dark p-2 text-center">
+                                <img className="imgCuadrado img-fluid card-img img-thumbnail" 
                                  src={mujermaravilla}  alt="Tercer slide"></img>                                
-                                <div class="col-sm-13" style={{fontWeight:'bold'}}>LA MUJER MARAVILLA</div>
+                                <div className="col-sm-13" style={{fontWeight:'bold'}}>LA MUJER MARAVILLA</div>
                             </div>
                         </div>                  
                     </div>

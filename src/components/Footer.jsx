@@ -16,17 +16,17 @@ const PieFooter= () => {
                     <p>Visite nuestras redes sociales y comparta nuestras publicaciones </p>
                 </div>         
 
-                <div class="m-0 row align-items-center justify-content-center">
-                    <div class="col-auto bg-dander p-3">
+                <div className="m-0 row align-items-center justify-content-center">
+                    <div className="col-auto bg-dander p-3">
                         <BsFacebook size={'3rem'}/>     
                     </div>
-                    <div class="col-auto bg-dander p-3">
+                    <div className="col-auto bg-dander p-3">
                         <BsInstagram size={'3rem'}/>
                     </div>                        
-                    <div class="col-auto bg-dander p-3">
+                    <div className="col-auto bg-dander p-3">
                         <BsGoogle size={'3rem'}/>
                     </div>                        
-                    <div class="col-auto bg-dander p-3">
+                    <div className="col-auto bg-dander p-3">
                         <BsYoutube size={'3rem'}/>
                     </div>  
                 </div>

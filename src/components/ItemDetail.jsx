@@ -43,9 +43,9 @@ const ItemDetail = ({producto}) => {
                                     <p className="card-title center" >PRECIO: S/. {producto.price}  STOCK: {producto.stock}  CATEGORIA: {producto.category.toUpperCase()}</p>
                                 </div> 
                                 
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col text-center">                                                                       
+                                <div className="container">
+                                    <div className="row">
+                                        <div className="col text-center">                                                                       
                                         {compra ? <div>
                                                     <hr />
                                                         {/*   */}
